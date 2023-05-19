@@ -9,7 +9,7 @@ from aiogram.utils import executor
 bot = Bot(token="6033243937:AAEm3U12TBBN5HSNcUTWHKMtuPTLHAufJi4")
 dp = Dispatcher(bot)
 
-WEATHE_API_TOKEN = "6667b026a2ba09a5004fe2e4b5f3762d"
+WEATHER_API_TOKEN = "6667b026a2ba09a5004fe2e4b5f3762d"
 
 
 @dp.message_handler(commands=["start"])
@@ -23,7 +23,7 @@ async def start_command(message: types.Message):
 async def get_weather(message: types.Message):
     try:
         response = requests.get(
-            f"https://api.openweathermap.org/data/2.5/weather?q={message.text}&lang=en&units=metric&APPID={WEATHE_API_TOKEN}"
+            f"https://api.openweathermap.org/data/2.5/weather?q={message.text}&lang=en&units=metric&APPID={WEATHER_API_TOKEN}"
         )
         data = response.json()
         city = data["name"]
