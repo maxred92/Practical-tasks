@@ -1,2 +1,3 @@
 # tg_bot
-Simple Telegram-bot
+
+My personal task
